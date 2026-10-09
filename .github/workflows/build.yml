@@ -5,8 +5,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Fixed Code
         uses: actions/checkout@v4
+        with:
+          repository: 'guan-tends/NekoSpeak'
+          ref: 'fix/all-omnivoice-pocket'
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
